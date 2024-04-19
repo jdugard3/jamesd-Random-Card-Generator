@@ -32,19 +32,19 @@ window.onload = function() {
     return value[Math.floor(Math.random() * value.length)];
   }
 
-  function generateCard() {
-    let randomSuit = generateRandomSuit();
-    let randomValue = generateRandomValue();
-    document.querySelector(".top").innerHTML = randomSuit;
-    document.querySelector(".mid").innerHTML = randomValue;
-    document.querySelector(".bottom").innerHTML = randomSuit;
+  let randomSuit = generateRandomSuit();
+  let randomValue = generateRandomValue();
+  document.querySelector(".top").innerHTML = randomSuit;
+  document.querySelector(".mid").innerHTML = randomValue;
+  document.querySelector(".bottom").innerHTML = randomSuit;
+  document.querySelector(".btn").addEventListener("click", function() {
+    location.reload();
+  });
 
-    if (randomSuit === "♦" || randomSuit === "♥") {
-      document.querySelector(".top").style.color = "red";
-      document.querySelector(".bottom").style.color = "red";
-    }
+  if (randomSuit === "♦" || randomSuit === "♥") {
+    document.querySelector(".top").style.color = "red";
+    document.querySelector(".bottom").style.color = "red";
   }
-  // generateCard();
 };
 //write your code here
 
